@@ -16,8 +16,8 @@ node {
         stage('Build Docker Image') {
             echo 'Building Docker Image...'
             sh """
-                docker build -t docker.io sibisam2301 my-httpd-server:latest .
-            """
+                docker build -t docker.io/sibisam2301/my-httpd-server:latest .
+             """
         }
 
         // Run Docker Container
