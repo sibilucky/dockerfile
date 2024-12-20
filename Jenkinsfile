@@ -24,7 +24,7 @@ node {
         stage('Deploy') {
             echo 'Deploying Docker container...'
             sh """
-               docker run -d --name httpd-container -p 7070:80 docker.io/sibisam2301/my-httpd-server:latest
+               docker run -d --name httpd-container -p 6060:6060 docker.io/sibisam2301/my-httpd-server:latest
              """
         }
 
