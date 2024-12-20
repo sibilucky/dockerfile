@@ -24,8 +24,8 @@ node {
         stage('Deploy') {
             echo 'Deploying Docker container...'
             sh """
-                docker run -d --name httpd-container -p 7070:80 sibisam2301 docker.io my-httpd-server:latest
-            """
+               docker run -d --name httpd-container -p 7070:80 docker.io/sibisam2301/my-httpd-server:latest
+             """
         }
 
         // Push Docker Image to Docker Registry
