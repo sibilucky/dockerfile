@@ -10,14 +10,9 @@ node {
     try {
         // Checkout from SCM (Git repository)
         stage('Checkout SCM') {
-            checkout scm(
-               branches: [[name: '*/main']], 
-                extensions: [], 
-                userRemoteConfigs: [[
-                    credentialsId: DOCKER_CREDENTIALS_ID,  // Use Docker credentials ID here
-                    url: 'https://github.com/sibilucky/dockerfile.git'
-                ]]
-            )
+            checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'docker-credentials-id', url: 'https://github.com/sibilucky/dockerfile.git']])
+                
+            
         }
 
         // Build Docker Image
