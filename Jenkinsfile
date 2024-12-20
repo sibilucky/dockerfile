@@ -33,7 +33,7 @@ node {
             echo 'Pushing Docker image to registry...'
             withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS_ID, usernameVariable: 'sibisam2301@gmail.com', passwordVariable: 'devika@123')]) {
                 sh """
-                    docker login -u sibisam2301@gmail.com  --password-stdin <<< devika@123
+                    echo devika@123 | docker login -u sibisam2301@gmail.com --password-stdin
                     docker push docker.io sibisam2301/my-httpd-server:latest
                 """
             }
