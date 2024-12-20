@@ -5,7 +5,7 @@ FROM httpd:2.4
 COPY ./index.html /usr/local/apache2/htdocs/
 
 # Expose port 70 for the web server
-EXPOSE 70
+EXPOSE 7070
 
 # Run the HTTPD service
 CMD ["httpd-foreground"]
