@@ -36,6 +36,7 @@ node {
                     echo devika@123 | docker login -u sibisam2301@gmail.com --password-stdin
                     docker push docker.io sibisam2301/my-httpd-server:latest
 
+
                 """
             }
         }
