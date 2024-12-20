@@ -5,6 +5,7 @@ node {
     def DOCKER_TAG = 'latest'
     def DOCKER_REGISTRY = 'docker.io'  // Docker registry (change if necessary)
     def DOCKER_CREDENTIALS_ID = 'docker-credentials-id'  // Jenkins credentials ID
+    def GIT_REPO = 'https://github.com/sibilucky/dockerfile.git'
 
     try {
         // Checkout from SCM (Git repository)
